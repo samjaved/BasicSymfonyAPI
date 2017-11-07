@@ -9,7 +9,7 @@ class BuildingRepository extends EntityRepository
     {
         return $this->getEntityManager()
             ->createQuery(
-                'SELECT building.street,building.moveindate FROM AppBundle:Buildings building '
+                'SELECT building.moveindate,building.street,building.postcode,building.town,building.country FROM AppBundle:Buildings building '
             )
             ->getResult();
     }
