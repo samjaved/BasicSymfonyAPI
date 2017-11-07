@@ -14,4 +14,5 @@ class BuildingRepository extends EntityRepository
             ->getResult();
     }
 }
+
 ?>

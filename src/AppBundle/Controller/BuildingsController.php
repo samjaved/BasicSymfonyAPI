@@ -11,20 +11,21 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Doctrine\ORM\EntityRepository;
 
 /**
-     * @Route("/buildings")
-     */
-class BuildingController extends Controller
+ * @Route("/Buildings")
+ */
+class BuildingsController extends Controller
 {
-    
-	/**
-     * @Route("api/list")
+
+    /**
+     * @Route("/list")
      */
-	public function listAction()
-{
+    public function listAction()
+    {
         $products = $this->getDoctrine()
-        ->getRepository(Buildings::class)
-        ->getAll();
-		return new JsonResponse( $products );
+            ->getRepository(Buildings::class)
+            ->getAll();
+        return new JsonResponse($products);
+    }
 }
-}
+
 ?>
