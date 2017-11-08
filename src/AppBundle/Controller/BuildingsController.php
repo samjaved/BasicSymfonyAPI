@@ -21,7 +21,7 @@ class BuildingsController extends Controller
      */
     public function insertAction(Request $request)
     {
-        $success=true;
+        $success = true;
         header("Access-Control-Allow-Origin: *");
         $data = json_decode($request->getContent(), true);
         $em = $this->getDoctrine()->getEntityManager();
@@ -37,15 +37,17 @@ class BuildingsController extends Controller
         $em->persist($building);
         $em->flush();
 
-        return new JsonResponse('success : '.$success);
+        return new JsonResponse('success : ' . $success);
 
 
     }
+
     /**
      * @Route("/list")
      */
     public function listAction()
     {
+        header("Access-Control-Allow-Origin: *");
         $products = $this->getDoctrine()
             ->getRepository(Buildings::class)
             ->getAll();
