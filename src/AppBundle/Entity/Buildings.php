@@ -19,7 +19,7 @@ class Buildings
 
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="string")
      */
     private $moveindate;
 
