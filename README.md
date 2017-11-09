@@ -9,14 +9,27 @@ Clone this repository and change the directory to cloned repository like cd task
 
 ## setup the database 
 
-Go to the app/config/parameters.yml file in cloned repository  and change the following parameters according to your database:
-    *database_host: 
-    *database_port: 
-    *database_name: 
-    *database_user: 
-    *database_password: 
+Go to the app/config/parameters.yml file in cloned repository  and change the following parameters according to your database:  
+    *database_host:  
+    *database_port:   
+    *database_name:  
+    *database_user:   
+    *database_password:   
+	
+## setup the email server  
+
+Go to the app/config/parameters.yml file in cloned repository  and change the following parameters according to your email server to send email :    
+    mailer_transport:   
+    mailer_host:   
+    mailer_user:   
+    mailer_port:   
+    mailer_password:  
+
+
+
+
 	
 ## Run the server
 
- cd task_backend/
- php bin/console server:run	
+ cd task_backend/  
+ php bin/console server:run  	
