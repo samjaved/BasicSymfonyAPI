@@ -54,6 +54,11 @@ class Buildings
     private $email;
 
     /**
+     * @ORM\Column(type="string",length=1000)
+     */
+    private $token;
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -179,7 +184,21 @@ class Buildings
     {
         $this->email = $email;
     }
+    /**
+     * @return mixed
+     */
+    public function getToken()
+    {
+        return $this->token;
+    }
 
+    /**
+     * @param mixed $token
+     */
+    public function setToken($token)
+    {
+        $this->token = $token;
+    }
 
 }
 

@@ -25,9 +25,6 @@ Go to the app/config/parameters.yml file in cloned repository  and change the fo
     mailer_port:   
     mailer_password:  
 
-
-
-
 	
 ## Run the server
 
