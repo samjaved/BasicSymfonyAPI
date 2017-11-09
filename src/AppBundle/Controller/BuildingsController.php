@@ -26,14 +26,14 @@ class BuildingsController extends Controller
         $data = json_decode($request->getContent(), true);
         $em = $this->getDoctrine()->getEntityManager();
         $building = new Buildings();
+		$building->setBuildingid($data['buildingid']);
         $building->setMoveindate($data['moveindate']);
         $building->setStreet($data['street']);
         $building->setPostcode($data['postcode']);
         $building->setTown($data['town']);
         $building->setCountry($data['country']);
         $building->setEmail($data['emailGroup']['email']);
-
-
+             
         $em->persist($building);
         $em->flush();
 

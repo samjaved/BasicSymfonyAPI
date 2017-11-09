@@ -18,6 +18,11 @@ class Buildings
     private $id;
 
 
+	/**
+     * @ORM\Column(type="integer")
+     */
+    private $buildingid;
+
     /**
      * @ORM\Column(type="string")
      */
@@ -62,6 +67,21 @@ class Buildings
     public function setId($id)
     {
         $this->id = $id;
+    }
+    /**
+     * @return mixed
+     */
+    public function getBuildingid()
+    {
+        return $this->buildingid;
+    }
+
+    /**
+     * @param mixed $buildingid
+     */
+    public function setBuildingid($buildingid)
+    {
+        $this->buildingid = $buildingid;
     }
 
     /**
