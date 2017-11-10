@@ -92,7 +92,7 @@ class BuildingsController extends Controller
      */
     public function deleteAction(Request $request, $id, $token)
     {
-        $homepage = "http://www.google.com";
+        $homepage = "http://ethan.is.inf.uni-due.de:8000/";
         //getting token from database on the basis of id
         $autheticated_token = $this->getDoctrine()
             ->getRepository(Buildings::class)
