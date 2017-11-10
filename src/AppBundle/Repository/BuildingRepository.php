@@ -13,6 +13,26 @@ class BuildingRepository extends EntityRepository
             )
             ->getResult();
     }
+
+    public function findTokenById($id)
+    {
+        /*return $this->getEntityManager()
+            ->createQuery(
+                'SELECT building.token FROM AppBundle:Buildings building Where building.id='$id)
+            ->getResult();*/
+        $result = $this->createQueryBuilder('Buildings')
+            ->select('Buildings.token')
+            ->where('Buildings.id =:id')
+            ->setParameter('id', $id)
+            ->getQuery()
+            ->getOneOrNullResult();
+
+        return $result['token'];
+
+
+    }
+
+
 }
 
 ?>
